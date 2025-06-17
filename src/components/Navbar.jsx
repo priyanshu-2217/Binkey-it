@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "../assets/logo.png";
 import { navItems } from "../constants/index";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -29,15 +30,15 @@ const Navbar = () => {
 
           {/* Mobile nav placeholder */}
           <div className="flex justify-between space-x-4 items-center">
-            <a href="#" className="py-2 px-3 border rounded-md">
+            <Link to="/signup" href="#" className="py-2 px-3 border rounded-md">
               Sign In
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+              to="/create-account"
               className="py-2 px-3 bg-gradient-to-r from-orange-300 to-orange-600 border rounded-md text-white"
             >
               Create an account
-            </a>
+            </Link>
           </div>
         </div>
       </div>

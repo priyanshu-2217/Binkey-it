@@ -1,21 +1,19 @@
+// src/App.jsx
 import React from "react";
-import Navbar from "./components/Navbar";
-import HeroSection from "./components/HeroSection";
-import Features from "../src/components/Features";
-import WorkFlow from "./components/WorkFlow";
-import Footer from "./components/Footer";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import LandingPage from "./Pages/Landingpage";
+import CreateAccount from "./components/create.jsx"; // Use correct path and PascalCase
+import SignUp from "./components/SignUp.jsx";
 
 function App() {
   return (
-    <>
-      <Navbar />
-      <div className="max-w-7xl mx-auto pt-20 px-6">
-        <HeroSection />
-      </div>
-      <Features />
-      <WorkFlow />
-      <Footer />
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/create-account" element={<CreateAccount />} />
+        <Route path="/signup" element={<SignUp />} />
+      </Routes>
+    </Router>
   );
 }
 
