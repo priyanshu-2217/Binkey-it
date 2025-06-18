@@ -1,8 +1,9 @@
 // src/pages/SignIn.jsx
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const SignIn = () => {
+  const [name, setName] = useState("");
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100 dark:bg-gray-900 px-4">
       <div className="w-full max-w-md bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-xl border dark:border-gray-700">
