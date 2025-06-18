@@ -1,16 +1,26 @@
 // src/pages/SignIn.jsx
+import axios from "axios";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const SignIn = () => {
-  const [name, setName] = useState("");
+  const [email, setEmail] = useState(" ");
+  const [password, setPassword] = useState(" ");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    axios
+      .post("http://localhost:8000/signUp", { email, password })
+      .then((result) => console.log(result))
+      .catch((err) => console.log(err));
+  };
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100 dark:bg-gray-900 px-4">
       <div className="w-full max-w-md bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-xl border dark:border-gray-700">
         <h2 className="text-3xl font-bold text-center text-gray-800 dark:text-white mb-6">
           Sign In
         </h2>
-        <form className="space-y-5">
+        <form className="space-y-5" onSubmit={handleSubmit}>
           <div>
             <label className="block text-sm font-medium text-gray-700 dark:text-gray-200">
               Email
@@ -20,6 +30,7 @@ const SignIn = () => {
               className="mt-1 block w-full px-4 py-2 bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white border border-gray-300 dark:border-gray-600 rounded-md focus:ring-blue-500 focus:border-blue-500"
               placeholder="you@example.com"
               required
+              onChange={(e) => setEmail(e.target.value)}
             />
           </div>
 
@@ -32,6 +43,7 @@ const SignIn = () => {
               className="mt-1 block w-full px-4 py-2 bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white border border-gray-300 dark:border-gray-600 rounded-md focus:ring-blue-500 focus:border-blue-500"
               placeholder="••••••••"
               required
+              onChange={(e) => setPassword(e.target.value)}
             />
           </div>
 
