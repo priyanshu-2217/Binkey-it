@@ -3,7 +3,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LandingPage from "./Pages/Landingpage";
 import CreateAccount from "./components/create.jsx"; // Use correct path and PascalCase
-import SignUp from "./components/SignUp.jsx";
+import SignIn from "./components/SignIn.jsx";
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/create-account" element={<CreateAccount />} />
-        <Route path="/signup" element={<SignUp />} />
+        <Route path="/signIn" element={<SignIn />} />
       </Routes>
     </Router>
   );

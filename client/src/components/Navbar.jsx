@@ -30,7 +30,7 @@ const Navbar = () => {
 
           {/* Mobile nav placeholder */}
           <div className="flex justify-between space-x-4 items-center">
-            <Link to="/signup" href="#" className="py-2 px-3 border rounded-md">
+            <Link to="/signIn" href="#" className="py-2 px-3 border rounded-md">
               Sign In
             </Link>
             <Link

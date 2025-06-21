@@ -4,16 +4,22 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const SignIn = () => {
-  const [email, setEmail] = useState(" ");
-  const [password, setPassword] = useState(" ");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
     axios
-      .post("http://localhost:/signUp", { email, password })
-      .then((result) => console.log(result))
-      .catch((err) => console.log(err));
+      .post("http://localhost:3001/signIn", { email, password }) // ✅ corrected endpoint
+      .then((result) => {
+        console.log(result.data);
+      })
+      .catch((err) => {
+        console.error("Login error:", err);
+      });
   };
+
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100 dark:bg-gray-900 px-4">
       <div className="w-full max-w-md bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-xl border dark:border-gray-700">
