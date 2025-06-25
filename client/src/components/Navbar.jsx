@@ -11,7 +11,7 @@ const Navbar = () => {
           {/* Logo Section */}
           <div className="flex items-center flex-shrink-0">
             <img className="h-10 w-10" src={logo} alt="StockTimes logo" />
-            <span className="tracking-tight text-xl ml-2">StockTimes</span>
+            <span className="tracking-tight text-xl ml-2">StalkStock</span>
           </div>
 
           {/* Desktop Nav Links */}
