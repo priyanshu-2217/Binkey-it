@@ -2,18 +2,21 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LandingPage from "./Pages/Landingpage";
-import CreateAccount from "./components/create.jsx"; // Use correct path and PascalCase
+import CreateAccount from "./components/create.jsx";
 import SignIn from "./components/SignIn.jsx";
+import { ThemeProvider } from "./context/Themecontext.jsx";
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<LandingPage />} />
-        <Route path="/create-account" element={<CreateAccount />} />
-        <Route path="/signIn" element={<SignIn />} />
-      </Routes>
-    </Router>
+    <ThemeProvider>
+      <Router>
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/create-account" element={<CreateAccount />} />
+          <Route path="/signIn" element={<SignIn />} />
+        </Routes>
+      </Router>
+    </ThemeProvider>
   );
 }
 

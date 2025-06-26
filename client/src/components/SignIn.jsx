@@ -11,7 +11,7 @@ const SignIn = () => {
     e.preventDefault();
 
     axios
-      .post("http://localhost:3001/signIn", { email, password }) // ✅ corrected endpoint
+      .post("http://localhost:3001/signIn", { email, password })
       .then((result) => {
         console.log(result.data);
       })
