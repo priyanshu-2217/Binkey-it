@@ -14,7 +14,7 @@ const Features = () => {
   const headingTextColor = theme === "dark" ? "text-white" : "text-black";
   const subTextColor = theme === "dark" ? "text-neutral-500" : "text-gray-600";
   const iconBg = theme === "dark" ? "bg-neutral-900" : "bg-yellow-200";
-  const iconText = theme === "dark" ? "text-orange-700" : "text-yellow-700";
+  const iconText = theme === "light" ? "text-orange-700" : "text-yellow-700";
   const borderColor =
     theme === "dark" ? "border-neutral-800" : "border-yellow-400/50";
 
